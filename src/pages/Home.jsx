@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full max-w-lg mx-auto px-4 my-4 flex">
+      <div className="w-full max-w-lg mx-auto px-4 my-4 flex justify-center">
         <SearchBar setSearchTitle={setSearchTitle} />
         <SortSelector setSortOption={setSortOption} />
       </div>
