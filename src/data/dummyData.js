@@ -5,7 +5,7 @@ export const dummyData = [
     price: 30000,
     date: "2025-05-03",
     content: "카메라 30000원에 판매합니다.",
-    image: "src/assets/camera.png",
+    image: "/images/camera.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const dummyData = [
     price: 450000,
     date: "2025-04-28",
     content: "상태 매우 좋습니다. 박스 풀세트 포함.",
-    image: "src/assets/ipad.png",
+    image: "/images/ipad.png",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const dummyData = [
     price: 80000,
     date: "2025-05-01",
     content: "생활 기스 있지만 튼튼합니다.",
-    image: "src/assets/bicycle.png",
+    image: "/images/bicycle.png",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const dummyData = [
     price: 20000,
     date: "2025-04-30",
     content: "이사 때문에 급처분합니다. 직접 가져가셔야 해요.",
-    image: "src/assets/chairs.png",
+    image: "/images/chairs.png",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const dummyData = [
     price: 60000,
     date: "2025-05-02",
     content: "정품이며 충전 케이스 포함입니다.",
-    image: "src/assets/buz.png",
+    image: "/images/buz.png",
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const dummyData = [
     price: 120000,
     date: "2025-04-27",
     content: "학생용 책상과 수납장 세트, 직접 설치 필요.",
-    image: "src/assets/table.png",
+    image: "/images/table.png",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const dummyData = [
     price: 200000,
     date: "2025-04-29",
     content: "실착 2회, 박스 및 구성품 모두 포함.",
-    image: "src/assets/snikers.png",
+    image: "/images/snikers.png",
   },
   {
     id: 8,
@@ -61,6 +61,6 @@ export const dummyData = [
     price: 25000,
     date: "2025-05-01",
     content: "작동 이상 없음. 튀김망은 사용감 있음.",
-    image: "src/assets/airfried.png",
+    image: "/images/airfried.png",
   },
 ];
