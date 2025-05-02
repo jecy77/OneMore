@@ -17,13 +17,31 @@ export default function Home() {
     return titleMatched;
   });
 
+  let sortedData = [];
+
+  switch (sortOption) {
+    case "latest":
+      // .sort() 는 원본 배열을 변형하므로 복사해서 사용
+      sortedData = [...filteredData].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+      );
+      break;
+
+    case "priceAsc":
+      sortedData = [...filteredData].sort((a, b) => a.price - b.price);
+      break;
+
+    default:
+      sortedData = filteredData;
+  }
+
   return (
     <>
       <div className="w-full max-w-lg mx-auto px-4 my-4 flex">
         <SearchBar setSearchTitle={setSearchTitle} />
         <SortSelector setSortOption={setSortOption} />
       </div>
-      <BoardList filteredData={filteredData} />
+      <BoardList sortedData={sortedData} />
     </>
   );
 }

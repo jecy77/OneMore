@@ -5,7 +5,7 @@ export const dummyData = [
     price: 30000,
     date: "2025-05-03",
     content: "카메라 30000원에 판매합니다.",
-    image: "image1",
+    image: "src/assets/camera.png",
   },
   {
     id: 2,
