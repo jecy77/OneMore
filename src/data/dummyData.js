@@ -6,6 +6,7 @@ export const dummyData = [
     date: "2025-05-03",
     content: "카메라 30000원에 판매합니다.",
     image: "/images/camera.png",
+    category: "전자기기",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const dummyData = [
     date: "2025-04-28",
     content: "상태 매우 좋습니다. 박스 풀세트 포함.",
     image: "/images/ipad.png",
+    category: "전자기기",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const dummyData = [
     date: "2025-05-01",
     content: "생활 기스 있지만 튼튼합니다.",
     image: "/images/bicycle.png",
+    category: "스포츠/레저",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const dummyData = [
     date: "2025-04-30",
     content: "이사 때문에 급처분합니다. 직접 가져가셔야 해요.",
     image: "/images/chairs.png",
+    category: "가구/인테리어",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const dummyData = [
     date: "2025-05-02",
     content: "정품이며 충전 케이스 포함입니다.",
     image: "/images/buz.png",
+    category: "전자기기",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const dummyData = [
     date: "2025-04-27",
     content: "학생용 책상과 수납장 세트, 직접 설치 필요.",
     image: "/images/table.png",
+    category: "가구/인테리어",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const dummyData = [
     date: "2025-04-29",
     content: "실착 2회, 박스 및 구성품 모두 포함.",
     image: "/images/snikers.png",
+    category: "패션/잡화",
   },
   {
     id: 8,
@@ -62,5 +69,6 @@ export const dummyData = [
     date: "2025-05-01",
     content: "작동 이상 없음. 튀김망은 사용감 있음.",
     image: "/images/airfried.png",
+    category: "가전제품",
   },
 ];

@@ -1,10 +1,24 @@
 import { useParams } from "react-router-dom";
-import { dummyData } from "../data/dummyData";
+import { useEffect, useState } from "react";
+// import { dummyData } from "../data/dummyData";
 import BaseButton from "./Base/BaseButton";
+import axios from "axios";
 
 export default function BoardDetail() {
   const { id } = useParams();
-  const selectedBoard = dummyData.find((item) => item.id == id);
+  // const selectedBoard = dummyData.find((item) => item.id == id);
+  const [board, setBoard] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3001/boards/${id}`)
+      .then((res) => setBoard(res.data))
+      .catch((err) => console.error("게시글 조회 실패:", err));
+  }, [id]);
+
+  if (!board) {
+    return <div className="text-center mt-20 text-gray-500">로딩 중...</div>;
+  }
 
   function handleClickBuy() {
     alert("상품을 구매합니다.");
@@ -15,15 +29,17 @@ export default function BoardDetail() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-12 mt-10 bg-white shadow-lg rounded-lg">
-      <h1 className="text-3xl font-bold mb-8 text-center">
-        {selectedBoard.title}
+    <div className="max-w-4xl mx-auto p-12 bg-white shadow-lg rounded-lg">
+      <h1 className="text-2xl font-bold mb-8 text-center">
+        {/* {selectedBoard.title} */}
+        {board.title}
       </h1>
 
       <div className="flex flex-col items-center md:flex-row gap-8 justify-center">
         <div className="flex justify-center md:justify-start">
           <img
-            src={selectedBoard.image}
+            // src={selectedBoard.image}
+            src={board.image}
             alt="상품 이미지"
             className="w-72 h-72 object-contain rounded-md"
           />
@@ -33,10 +49,12 @@ export default function BoardDetail() {
           <div className="mb-6">
             <div className="text-lg mb-2">
               <span className="font-semibold">가격</span>{" "}
-              {selectedBoard.price.toLocaleString()} 원
+              {/* {selectedBoard.price.toLocaleString()} 원 */}
+              {board.price.toLocaleString()} 원
             </div>
             <p className="text-gray-700 whitespace-pre-line lg:min-h-[20rem]">
-              {selectedBoard.content}
+              {/* {selectedBoard.content} */}
+              {board.content}
             </p>
           </div>
 
