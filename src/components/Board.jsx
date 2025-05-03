@@ -9,14 +9,14 @@ export default function Board({ title, price, date, image }) {
   }
 
   return (
-    <div className="flex flex-col gap-2  bg-green-200 rounded-xl">
+    <div className="flex flex-col gap-2 shadow-lg  bg-gray-300 rounded-xl p-8">
       <img src={image} alt="상품 이미지" />
       <div onClick={(e) => toggleHeart(e)}>
         {filledHeart ? <FaHeart className="text-red-600" /> : <FaRegHeart />}
       </div>
-      <div>{title || "제목"}</div>
-      <div>{price || "가격"}</div>
-      <div>{date || "날짜"}</div>
+      <div className="font-bold">{title || "제목"}</div>
+      <div>{(price || "가격").toLocaleString?.()} 원</div>
+      <div className="text-gray-600">{date || "날짜"}</div>
     </div>
   );
 }

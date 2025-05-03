@@ -2,9 +2,8 @@ import { useParams } from "react-router-dom";
 import { dummyData } from "../data/dummyData";
 import BaseButton from "./Base/BaseButton";
 
-export default function BoardDetail(props) {
+export default function BoardDetail() {
   const { id } = useParams();
-
   const selectedBoard = dummyData.find((item) => item.id == id);
 
   function handleClickBuy() {
@@ -16,30 +15,47 @@ export default function BoardDetail(props) {
   }
 
   return (
-    <>
-      <div className="m-6 flex flex-col justify-center items-center">
-        <div className="text-3xl py-4">{selectedBoard.title}</div>
-        <div>{selectedBoard.content}</div>
-        <img
-          src={selectedBoard.image}
-          alt="상품 이미지"
-          className="w-48 h-48"
-        />
-        <div className="flex gap-3">
-          <BaseButton
-            onClick={handleClickBuy}
-            cName="bg-red-500 hover:bg-red-700"
-          >
-            구매하기
-          </BaseButton>
-          <BaseButton
-            onClick={handleClickCart}
-            cName="bg-blue-500 hover:bg-blue-700"
-          >
-            장바구니
-          </BaseButton>
+    <div className="max-w-4xl mx-auto p-12 mt-10 bg-white shadow-lg rounded-lg">
+      <h1 className="text-3xl font-bold mb-8 text-center">
+        {selectedBoard.title}
+      </h1>
+
+      <div className="flex flex-col items-center md:flex-row gap-8 justify-center">
+        <div className="flex justify-center md:justify-start">
+          <img
+            src={selectedBoard.image}
+            alt="상품 이미지"
+            className="w-72 h-72 object-contain rounded-md"
+          />
+        </div>
+
+        <div className="flex flex-col items-start justify-center">
+          <div className="mb-6">
+            <div className="text-lg mb-2">
+              <span className="font-semibold">가격</span>{" "}
+              {selectedBoard.price.toLocaleString()} 원
+            </div>
+            <p className="text-gray-700 whitespace-pre-line lg:min-h-[20rem]">
+              {selectedBoard.content}
+            </p>
+          </div>
+
+          <div className="flex gap-4">
+            <BaseButton
+              onClick={handleClickCart}
+              cName="bg-blue-500 hover:bg-blue-700"
+            >
+              장바구니
+            </BaseButton>
+            <BaseButton
+              onClick={handleClickBuy}
+              cName="bg-red-500 hover:bg-red-700"
+            >
+              구매하기
+            </BaseButton>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
