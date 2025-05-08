@@ -11,8 +11,9 @@ export default function BoardDetail() {
 
   useEffect(() => {
     axios
-      // .get(`http://localhost:3001/boards/${id}`)
-      .get(`http://localhost:3000/boards/${id}`)
+      // .get(`http://localhost:3001/boards/${id}`) // json
+      // .get(`http://localhost:3000/boards/${id}`) // 로컬 back
+      .get(`https://onemore-be.onrender.com/boards/${id}`)
       .then((res) => setBoard(res.data))
       .catch((err) => console.error("게시글 조회 실패:", err));
   }, [id]);
@@ -40,7 +41,7 @@ export default function BoardDetail() {
         <div className="flex justify-center md:justify-start">
           <img
             // src={selectedBoard.image}
-            src={board.image}
+            src={board.image_path}
             alt="상품 이미지"
             className="w-72 h-72 object-contain rounded-md"
           />

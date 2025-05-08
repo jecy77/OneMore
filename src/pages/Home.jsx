@@ -15,7 +15,8 @@ export default function Home() {
 
   useEffect(() => {
     // axios.get("http://localhost:3001/boards").then((res) => {
-    axios.get("http://localhost:3000/boards").then((res) => {
+    // axios.get("http://localhost:3000/boards").then((res) => {
+    axios.get("https://onemore-be.onrender.com/boards").then((res) => {
       setBoards(res.data);
     });
   }, []);

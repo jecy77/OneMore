@@ -25,7 +25,8 @@ export default function Sell() {
     };
 
     // await axios.post("http://localhost:3001/boards", newBoard); // json
-    await axios.post("http://localhost:3000/boards", newBoard);
+    // await axios.post("http://localhost:3000/boards", newBoard); // 로컬 back
+    await axios.post("https://onemore-be.onrender.com/boards", newBoard);
 
     setTitle("");
     setPrice("");
