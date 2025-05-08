@@ -11,7 +11,8 @@ export default function BoardDetail() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/boards/${id}`)
+      // .get(`http://localhost:3001/boards/${id}`)
+      .get(`http://localhost:3000/boards/${id}`)
       .then((res) => setBoard(res.data))
       .catch((err) => console.error("게시글 조회 실패:", err));
   }, [id]);

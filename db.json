@@ -71,6 +71,14 @@
       "content": "작동 이상 없음. 튀김망은 사용감 있음.",
       "image": "/images/airfried.png",
       "category": "가전제품"
+    },
+    {
+      "id": "f7a6",
+      "title": "fff",
+      "price": 10000,
+      "content": "aaa",
+      "image": null,
+      "date": "2025-05-06"
     }
   ]
 }

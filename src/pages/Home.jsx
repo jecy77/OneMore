@@ -2,7 +2,7 @@ import SearchBar from "../components/SearchBar";
 import BoardList from "../components/BoardList";
 import SortSelector from "../components/SortSelector";
 import { useEffect, useState } from "react";
-import { dummyData } from "../data/dummyData";
+// import { dummyData } from "../data/dummyData";
 import { Link } from "react-router-dom";
 import Tag from "../components/Tag";
 import axios from "axios";
@@ -14,7 +14,8 @@ export default function Home() {
   const [boards, setBoards] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/boards").then((res) => {
+    // axios.get("http://localhost:3001/boards").then((res) => {
+    axios.get("http://localhost:3000/boards").then((res) => {
       setBoards(res.data);
     });
   }, []);

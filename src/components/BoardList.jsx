@@ -10,7 +10,8 @@ export default function BoardList({ tagFilteredData }) {
             key={item.id}
             title={item.title}
             price={item.price}
-            image={item.image}
+            // image={item.image}
+            image={item.image_path}
             date={item.date}
           />
         </Link>

@@ -18,7 +18,9 @@ export default function Board({ title, price, date, image }) {
       </div>
       <div className="font-bold">{title || "제목"}</div>
       <div>{(price || "가격").toLocaleString?.()} 원</div>
-      <div className="text-gray-600">{date || "날짜"}</div>
+      <div className="text-gray-600">
+        {new Date(date).toLocaleDateString("ko-KR") || "날짜"}
+      </div>
     </div>
   );
 }
