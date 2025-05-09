@@ -46,7 +46,7 @@ export default function Sell() {
       <File setFile={setFile} />
 
       <BaseButton
-        cName="w-full bg-blue-500 hover:bg-blue-600  rounded-lg"
+        cName="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
         onClick={handleSubmit}
       >
         등록하기

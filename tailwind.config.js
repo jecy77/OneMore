@@ -5,6 +5,8 @@ export default {
     extend: {
       fontFamily: {
         tagesschrift: ['"Tagesschrift"', "system-ui"],
+        josefin: ['"Josefin Sans"', "sans-serif"],
+        loopet: ['"Playwrite DK Loopet"', "cursive"],
       },
     },
   },
