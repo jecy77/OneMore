@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 // import { dummyData } from "../data/dummyData";
 import BaseButton from "./Base/BaseButton";
 import axios from "axios";
+import BoardDeleteButton from "./BoardDetail/BoardDeleteButton";
+import BoardUpdateButton from "./BoardDetail/BoardUpdateButton";
 
 export default function BoardDetail() {
   const { id } = useParams();
@@ -32,11 +34,14 @@ export default function BoardDetail() {
 
   return (
     <div className="max-w-4xl mx-auto p-12 bg-white shadow-lg rounded-lg">
+      <div className="flex flex-col items-end">
+        <BoardDeleteButton id={board.id}>게시글 삭제하기</BoardDeleteButton>
+        <BoardUpdateButton>게시글 수정하기</BoardUpdateButton>
+      </div>
       <h1 className="text-2xl font-bold mb-8 text-center">
         {/* {selectedBoard.title} */}
         {board.title}
       </h1>
-
       <div className="flex flex-col items-center md:flex-row gap-8 justify-center">
         <div className="flex justify-center md:justify-start">
           <img
@@ -63,13 +68,13 @@ export default function BoardDetail() {
           <div className="flex gap-4">
             <BaseButton
               onClick={handleClickCart}
-              cName="bg-blue-500 hover:bg-blue-700"
+              cName="bg-blue-500 hover:bg-blue-700 text-white "
             >
               장바구니
             </BaseButton>
             <BaseButton
               onClick={handleClickBuy}
-              cName="bg-red-500 hover:bg-red-700"
+              cName="bg-red-500 hover:bg-red-700 text-white "
             >
               구매하기
             </BaseButton>
