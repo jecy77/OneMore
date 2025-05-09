@@ -16,7 +16,7 @@ export default function BoardUpdateButton({
 
   return (
     <button
-      className="flex items-center p-1 rounded-sm bg-gray-200 hover:text-gray-400 text-black hover:border-black mr-1 text-sm"
+      className="flex items-center p-1 rounded-sm bg-gray-200 hover:text-gray-400 text-black mr-1 text-sm"
       onClick={handleUpdateButton}
     >
       <div>{children}</div>
