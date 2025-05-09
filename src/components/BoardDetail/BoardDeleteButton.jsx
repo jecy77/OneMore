@@ -18,7 +18,7 @@ export default function BoardDeleteButton({ children, id }) {
 
   return (
     <button
-      className="flex items-center p-1 rounded-sm bg-gray-200 hover:text-gray-400 text-black hover:border-black mr-1 md:mb-1
+      className="flex items-center p-1 rounded-sm bg-gray-200 hover:text-gray-400 text-black hover:border-black mr-1 md:mb-1 text-sm
     "
       onClick={handleDeleteClick}
     >
