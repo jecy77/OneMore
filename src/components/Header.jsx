@@ -1,13 +1,13 @@
 import { MdOutlinePerson } from "react-icons/md";
-import { IoMenuOutline } from "react-icons/io5";
+import { CgMenuLeftAlt } from "react-icons/cg";
 import { BsCart3 } from "react-icons/bs";
 import { IoPersonOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 export default function Header(props) {
   return (
-    <header className="sticky top-0 bg-white px-5 py-7 flex justify-between z-50">
-      <IoMenuOutline className="w-7 h-7 text-black" />
+    <header className="sticky top-0 bg-white px-10 py-7 flex justify-between z-50">
+      <CgMenuLeftAlt className="w-7 h-7 text-black" />
       <Link to="/">
         <div className=" text-black font-light text-3xl font-josefin text-2xl ">
           One <span className="text-[#56905b]">More</span>

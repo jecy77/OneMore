@@ -1,7 +1,6 @@
 export default function content({ setContent }) {
   return (
-    <div className="mb-4">
-      <label className="block text-gray-700 font-medium mb-1">본문</label>
+    <div className="mb-4 ml-11">
       <textarea
         rows="5"
         placeholder="상품 설명을 입력하세요"

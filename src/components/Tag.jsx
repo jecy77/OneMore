@@ -14,7 +14,7 @@ export default function Tag({ children, setSelectedTags, selectedTags }) {
   return (
     <>
       <div
-        className={`rounded-full border-[2px] p-3 text-sm hover:cursor-pointer  transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 
+        className={`rounded-full font-noto border-[2px] p-3 text-sm font-light hover:cursor-pointer  transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 
           ${
             isSelected ? " bg-[#56905b] text-white border-white" : " text-black"
           }
