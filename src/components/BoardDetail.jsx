@@ -34,7 +34,7 @@ export default function BoardDetail() {
 
   return (
     <div className="max-w-4xl mx-auto p-12 bg-white shadow-lg rounded-lg">
-      <div className="flex flex-col items-end">
+      <div className="flex flex-row md:items-end justify-center mb-4 md:flex-col">
         <BoardDeleteButton id={board.id}>게시글 삭제하기</BoardDeleteButton>
         <BoardUpdateButton>게시글 수정하기</BoardUpdateButton>
       </div>
